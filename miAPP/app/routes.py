@@ -174,6 +174,7 @@ def editar_perfil():
             # Actualiza la sesión del usuario si cambió el nombre de usuario
             if new_username != session['username']:
                 session['username'] = new_username
+            return redirect(url_for('principal'))
 
         return render_template('editar_perfil.html')
     else:
